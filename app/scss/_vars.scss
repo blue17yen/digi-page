@@ -1,0 +1,14 @@
+$dark-blue: #2B4074;
+$light-yellow: #F9F6E5;
+$dark-red: #4A4A4A;
+
+@use 'fonts';
+
+@mixin font-family($ff, $fw) {
+    font-family: $ff, 'Arial', sans-serif;
+    font-weight: $fw;
+}
+@mixin font($fz, $lh) {
+    font-size: $fz;
+    line-height: $lh;
+}
