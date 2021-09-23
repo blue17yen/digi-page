@@ -85,8 +85,13 @@ $(function() {
 
 
 // MASONRY
-
-$(window).load(function()  {
+$(".latest-news__content").masonry({
+    itemSelector: ".latest-news__item",
+    columnWidth: 270,
+    gutter: 30,
+    horizontalOrder: true,
+});
+$(document).imagesLoaded(function(){
     $(".latest-news__content").masonry({
         itemSelector: ".latest-news__item",
         columnWidth: 270,
