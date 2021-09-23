@@ -202,6 +202,12 @@
     &__slider {
         position: relative;
         min-height: 193px;
+        &:not(:first-of-type) {
+            display: none;
+        }
+        &.slick-initialized &:not(:first-of-type) {
+            display:block;
+        } 
     }
     &__title {
         color: #ffffff;
@@ -242,6 +248,7 @@
         @include font-family('Roboto', 400);
         @include font(18px, 18px);
     } 
+
     .slick-arrow {
         position: absolute;
         z-index: 5;
@@ -1326,6 +1333,12 @@
     &__slider {
         min-height: 460px;
         position: relative;
+        &:not(:first-of-type) {
+            display: none;
+        }
+        &.slick-initialized &:not(:first-of-type) {
+            display:block;
+        } 
     }
     &__item {
         padding: 60px 0 40px;
