@@ -85,17 +85,13 @@ $(function() {
 
 
 // MASONRY
-$(".latest-news__content").masonry({
-    itemSelector: ".latest-news__item",
-    columnWidth: 270,
-    gutter: 30,
-    horizontalOrder: true,
-});
-$(document).imagesLoaded(function(){
-    $(".latest-news__content").masonry({
+
+var $grid = $(".latest-news__content").imagesLoaded(function () {
+    // init Masonry after all images have loaded
+    $grid.masonry({
         itemSelector: ".latest-news__item",
         columnWidth: 270,
         gutter: 30,
         horizontalOrder: true,
     });
-})
+});
